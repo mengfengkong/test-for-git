@@ -1,8 +1,9 @@
 name: Auto Publish Website # 自动部署的名称
 on:
   push:
-    tags: # 当我们提交代码为tag 是以'v'开头的时候才会触发自动部署到服务端 如 git push tag v0.1.0
-      - 'v*'
+    branches: [ "master" ]
+    pull_request:
+      branches: [ "master" ]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # 运行环境，告诉它运行在什么环境
