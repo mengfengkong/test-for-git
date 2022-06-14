@@ -25,8 +25,8 @@ jobs:
           cd /home/gitaction/test-for-git
           git pull
           unalias cp
-          cp -rf ds_source_center /data/dolphinscheduler/
+          cp -rf ds_source_center/* /data/dolphinscheduler/
           chmod +x -R /data/dolphinscheduler/shell/
-          cp -rf datax_job /usr/local/datax/job/
+          cp -rf datax_job/* /usr/local/datax/job/
           cd /usr/local/datax/job/
           chmod +x -R *.sh
